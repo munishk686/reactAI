@@ -16,14 +16,9 @@ export default function Home() {
     setSummary("");
 
     try {
-      const response = await fetch(
-        "https://api-inference.huggingface.co/models/facebook/bart-large-cnn",
-        {
+      const response = await fetch("/api/summarize", {
           method: "POST",
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_HF_API_KEY}`,
-            "Content-Type": "application/json",
-          },
+          headers: {"Content-Type": "application/json",},
           body: JSON.stringify({ inputs: inputText }),
         }
       );
