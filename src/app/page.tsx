@@ -7,6 +7,7 @@ export default function Home() {
   const [summary, setSummary] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  console.log("Hello from the client side!"); // Debug log to confirm client-side rendering
 
   const summarizeText = async () => {
     if (!inputText.trim()) return;
