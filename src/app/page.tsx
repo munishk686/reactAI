@@ -33,7 +33,7 @@ export default function Home() {
         throw new Error(data.error);
       }
 
-      setSummary(data[0]?.summary_text || "No summary returned.");
+     setSummary(data.summary || "No summary returned.");
     } catch (error) {
       if (error instanceof Error) {
         setError(error.message);
