@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100">
-      <h1 className="text-2xl font-bold mb-4">AI Text Summarizer</h1>
+      <h1 className="text-2xl font-bold mb-4">AI Text Summariser</h1>
 
       <textarea
         className="w-full max-w-xl p-3 border rounded-lg mb-4"
@@ -63,7 +63,7 @@ export default function Home() {
         className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400"
         disabled={loading}
       >
-        {loading ? "Summarizing..." : "Summarize"}
+        {loading ? "Summarising..." : "Summarise"}
       </button>
 
       {error && <p className="mt-4 text-red-500">{error}</p>}
